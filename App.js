@@ -1,21 +1,24 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, {useEffect} from 'react';
+import { StyleSheet, Text, View,Alert } from 'react-native';
+import Navigator from './routes/Homestack'
 
 export default function App() {
+
+  let removeSplash = false
+
+  useEffect(()=>{
+    setTimeout(()=> {
+      removeSplash = true;
+      Alert.alert('remove splash')
+    },2000)
+  },[])
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+     <Navigator splashRemove ={removeSplash} />
+  )
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+
 });
