@@ -1,11 +1,13 @@
 import React from 'react'
-import {View, Text, StyleSheet} from 'react-native'
+import {View, Text, StyleSheet, TouchableOpacity} from 'react-native'
+import Header from './Header'
+import Nav from './Navigation'
 
-
-const Home = () =>{
+const Home = ({navigation}) =>{
   return(
     <View style={styles.container}>
-       <Text style={styles.txt}>Home</Text>
+      <Header heading='featured products' />
+      <Nav />
     </View>
   )
 }
@@ -21,7 +23,11 @@ const styles = StyleSheet.create({
   txt:{
     color:'white',
     fontSize: 28,
-    fontWeight:'bold'
+    fontWeight:'bold',
+    flex:1
+  },
+  btn:{
+
   }
 });
 

@@ -3,8 +3,6 @@ import {createAppContainer} from 'react-navigation'
 import Splash from '../components/Splash'
 import Home from '../components/Home'
 
-
-
 const screens = {
   Splash:{
     screen: Splash,
