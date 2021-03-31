@@ -1,17 +1,24 @@
 import React, {useState} from 'react'
 import {View,Button, Text, StyleSheet, Image, Alert, TouchableOpacity} from 'react-native'
 import Header from './Header'
-import Images from '../global/Images'
+
 
 const Customize = ({navigation}) =>{
 
   const [purplechair,setPurpleChair] = useState(false)
   const [bluechair,setBlueChair] = useState(true)
   const [greenchair,setGreenChair] = useState(false)
+  const [cart,setCart] = useState(0)
+
+
+  if(cart > 5){
+    Alert.alert('out of chairs')
+    setCart(0)
+  }
 
   return(
     <View style={styles.container}>  
-     <Header heading='customize item'/>
+     <Header heading='customize item' onCart={cart}/>
       { bluechair && <Image style={styles.chair} source={require('../assets/chair.png')}/>}
       { greenchair&&  <Image style={styles.chair} source={require('../assets/green-chair.png')}/>}
       { purplechair && <Image style={styles.chair} source={require('../assets/purple-chair.png')}/>}
@@ -37,7 +44,7 @@ const Customize = ({navigation}) =>{
       <Button
         title="Add To Cart" 
         color="white" 
-        onPress={()=>Alert.alert('added to cart!')} 
+        onPress={()=> setCart( cart +1)} 
       />
      </View>
     </View>

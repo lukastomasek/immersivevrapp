@@ -5,7 +5,7 @@ import * as RootNavigation from '../routes/RootNavigation';
 const Navigation = ()=>{
 
   return(
-    <View style={styles.container}>
+    <View style={styles.container1}>
      <TouchableOpacity ><Image style={styles.btn}  source={require('../assets/home.png')} /></TouchableOpacity>
      <TouchableOpacity><Image style={styles.btn} source={require('../assets/account.png')} /></TouchableOpacity>
      <TouchableOpacity  ><Image style={styles.btn} source={require('../assets/settings.png')} /></TouchableOpacity>
@@ -15,7 +15,7 @@ const Navigation = ()=>{
 
 
 const styles = StyleSheet.create({
-  container:{
+  container1:{
     backgroundColor: '#7C2AB5',
     marginBottom: 1,
     justifyContent: 'flex-start',

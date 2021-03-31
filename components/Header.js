@@ -3,13 +3,14 @@ import {View, Text, StyleSheet, Image, TouchableOpacity, Alert} from 'react-nati
 
 
 
-const Header = ({heading}) =>{
+const Header = ({heading, onCart}) =>{
   return(
     <View style={styles.container}>
       <View style={styles.imgs}>
         <Image style={styles.logo} source={require('../assets/logo.png')}/>
         <TouchableOpacity onPress={()=> Alert.alert('cart is empty')}>
           <Image style={styles.cart} source={require('../assets/cart.png')}/>
+          <Text style={styles.cardNum}>{onCart}</Text>
         </TouchableOpacity>
       </View>
       <Text style={styles.txt}>{heading}</Text>
@@ -47,6 +48,13 @@ const styles = StyleSheet.create({
     fontWeight:'bold',
     textTransform: 'capitalize',
     marginTop:30
+  }
+  ,cardNum:{
+    color:'white',
+    fontSize: 18,
+    position: 'absolute',
+    top: -55,
+    right: -10
   }
 })
 

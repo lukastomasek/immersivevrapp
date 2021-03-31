@@ -32,7 +32,11 @@ const Home = ({navigation}) =>{
               </View>
           </TouchableOpacity>
        </View>
-         <Nav/>   
+       <View style={styles.container1}>
+          <TouchableOpacity onPress={()=> navigation.navigate('Home')}><Image style={styles.btn}  source={require('../assets/home.png')} /></TouchableOpacity>
+          <TouchableOpacity onPress={()=> navigation.navigate('Account')}><Image style={styles.btn} source={require('../assets/account.png')} /></TouchableOpacity>
+          <TouchableOpacity onPress={()=> navigation.navigate('Settings')}><Image style={styles.btn} source={require('../assets/settings.png')} /></TouchableOpacity>
+      </View>
     </View>
   )
 }
@@ -40,7 +44,6 @@ const Home = ({navigation}) =>{
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor:'#343551'
@@ -86,6 +89,24 @@ const styles = StyleSheet.create({
     left:30,
     color: 'white',
     fontSize: 16
+  },
+  container1:{
+    backgroundColor: '#7C2AB5',
+    marginBottom: 1,
+    justifyContent: 'flex-start',
+    width: 450,
+    height: 100,
+    flexDirection:'row',
+    justifyContent:'center',
+    borderRadius: 20
+  },
+  btn:{
+    width:30,
+    height:30,
+    marginLeft: 40,
+    marginRight:40,
+    marginTop:15,
+    opacity: 1
   }
 });
 

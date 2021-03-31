@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react'
-import {View, Text, StyleSheet, Image} from 'react-native'
+import {View, Text, StyleSheet, Image,ActivityIndicator} from 'react-native'
 
 
 const Splash = ({navigation}) =>{
@@ -14,7 +14,8 @@ const Splash = ({navigation}) =>{
     <View style={styles.container}>
         <Image style={styles.logo} source={require('../assets/logo.png')} />
        <Text style={styles.txt}>IMMERSIVE <Text style={styles.txt2}>VR</Text></Text>
-       <Text style={{color:'white',fontSize:18, marginTop:10}}>Loading...</Text>
+       {/* <Text style={{color:'white',fontSize:18, marginTop:10}}>Loading...</Text> */}
+       <ActivityIndicator size="large" color="#7C2AB5" />
     </View>
   )
 }
