@@ -1,15 +1,23 @@
 import React, {useEffect} from 'react'
-import {View, Text, StyleSheet, Image} from 'react-native'
-
+import {View,Button, Text, StyleSheet, Image, Alert} from 'react-native'
+import Header from './Header'
 
 const Customize = ({navigation}) =>{
+
   return(
     <View style={styles.container}>
-      <Text style={styles.txt}>Customize Item</Text>
+     <Header heading='customize item'/>
+     <Image style={styles.chair} source={require('../assets/chair.png')} />
+     <View style={styles.btn}>
+      <Button
+        title="Add To Cart" 
+        color="white" 
+        onPress={()=>Alert.alert('added to cart!')} 
+      />
+     </View>
     </View>
   )
 }
-
 
 const styles = StyleSheet.create({
   container: {
@@ -24,6 +32,19 @@ const styles = StyleSheet.create({
     fontSize: 28,
     fontWeight:'bold'
   },
+  chair:{
+    height:300,
+    width:300,
+    position:'absolute',
+  },
+  btn:{
+    textAlign:'center',
+    backgroundColor: '#07B7FC',
+    width:200,
+    position: 'absolute',
+    bottom: 100,
+    borderRadius:10
+  }
 })
 
 

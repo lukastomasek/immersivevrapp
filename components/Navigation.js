@@ -1,13 +1,14 @@
-import React, {useEffect} from 'react'
+import * as React from 'react';
 import {View, Text, StyleSheet, Image, TouchableOpacity, Alert} from 'react-native'
-
+import * as RootNavigation from '../routes/RootNavigation';
 
 const Navigation = ()=>{
+
   return(
     <View style={styles.container}>
      <TouchableOpacity ><Image style={styles.btn}  source={require('../assets/home.png')} /></TouchableOpacity>
      <TouchableOpacity><Image style={styles.btn} source={require('../assets/account.png')} /></TouchableOpacity>
-     <TouchableOpacity><Image style={styles.btn} source={require('../assets/settings.png')} /></TouchableOpacity>
+     <TouchableOpacity  ><Image style={styles.btn} source={require('../assets/settings.png')} /></TouchableOpacity>
     </View>
   )
 }

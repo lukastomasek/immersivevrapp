@@ -3,6 +3,7 @@ import {createAppContainer} from 'react-navigation'
 import Splash from '../components/Splash'
 import Home from '../components/Home'
 import Custom from '../components/Customize'
+import Account from '../components/Account'
 
 const screens = {
   Splash:{
@@ -19,6 +20,9 @@ const screens = {
   },
   Customize:{
     screen: Custom
+  },
+  YourAccount:{
+    screen: Account
   }
  
 }

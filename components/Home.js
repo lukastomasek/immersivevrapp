@@ -2,6 +2,7 @@ import React from 'react'
 import {View, Image,Text, StyleSheet, TouchableOpacity,Dimensions} from 'react-native'
 import Header from './Header'
 import Nav from './Navigation'
+import {navigationRef} from '../routes/RootNavigation';
 
 const Home = ({navigation}) =>{
 
@@ -11,9 +12,9 @@ const Home = ({navigation}) =>{
   const moveToCustom = () =>{
     navigation.navigate('Customize')
   }
-
+  const p = navigation
   return(
-    <View style={styles.container}>
+    <View style={styles.container} ref={navigationRef}>
       <Header heading='featured products' />  
        <View style={styles.cards}>
         <TouchableOpacity onPress={moveToCustom} style={styles.card}>
@@ -30,10 +31,8 @@ const Home = ({navigation}) =>{
               <Text style={styles.detail}>Immersive VR Chair v2</Text>
               </View>
           </TouchableOpacity>
-
        </View>
-      <Nav />
-     
+         <Nav/>   
     </View>
   )
 }
@@ -58,13 +57,13 @@ const styles = StyleSheet.create({
   card:{
     display: 'flex',
     justifyContent: 'center',
-    bottom: 300,
+    bottom: 280,
     margin: 30,
-    right: 25,
+    right: 15,
   },
   cardImg:{
-   width: 200,
-   height:200,
+   width: 180,
+   height:180,
    position: 'absolute',
    top: 0,
    bottom: 0,
