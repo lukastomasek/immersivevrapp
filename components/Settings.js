@@ -39,9 +39,7 @@ const Settings = ({navigation}) =>{
   const toggleSwitch3 = () => setIsEnabled3(previousState => !previousState);
 
   return(
-    <View style={styles.container}>
-     {/* <Header heading='Account'/> */}
-        
+    <View style={styles.container}>        
       <FlatList style={styles.list}
          data={Data}
          renderItem={({item}) => (
@@ -52,18 +50,18 @@ const Settings = ({navigation}) =>{
       />
        <View style={styles.switches}>
           <Switch style = {styles.switch1}
-                      trackColor={{ false: "#767577", true: "#81b0ff" }}
-                      ios_backgroundColor="#3e3e3e"
-                      onValueChange={(value)=>setIsEnabled1(value)}
-                      value={isEnabled1}
-                    />
-                      <Switch style = {styles.switch2}
-                trackColor={{ false: "#767577", true: "#81b0ff" }}
-                ios_backgroundColor="#3e3e3e"
-                onValueChange={(value)=>setIsEnabled2(value)}
-                value={isEnabled2}
-              />
-                <Switch style = {styles.switch3}
+                  trackColor={{ false: "#767577", true: "#81b0ff" }}
+                  ios_backgroundColor="#3e3e3e"
+                  onValueChange={(value)=>setIsEnabled1(value)}
+                  value={isEnabled1}
+                  />
+         <Switch style = {styles.switch2}
+                 trackColor={{ false: "#767577", true: "#81b0ff" }}
+                 ios_backgroundColor="#3e3e3e"
+                 onValueChange={(value)=>setIsEnabled2(value)}
+                 value={isEnabled2}
+                 />
+        <Switch style = {styles.switch3}
                 trackColor={{ false: "#767577", true: "#81b0ff" }}
                 ios_backgroundColor="#3e3e3e"
                 onValueChange={(value)=>setIsEnabled3(value)}
