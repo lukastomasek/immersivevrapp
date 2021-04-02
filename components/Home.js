@@ -12,7 +12,6 @@ const Home = ({navigation}) =>{
   const moveToCustom = () =>{
     navigation.navigate('Customize')
   }
-  const p = navigation
   return(
     <View style={styles.container} ref={navigationRef}>
       <Header heading='featured products' />  

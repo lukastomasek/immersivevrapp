@@ -31,11 +31,11 @@ const Settings = ({navigation}) =>{
     }
   ]
 
-  const [isEnabled1, setIsEnabled1] = useState(false);
+  const [isEnabled1, setIsEnabled1] = useState(true);
   const toggleSwitch1 = () => setIsEnabled1(previousState => !previousState);
-  const [isEnabled2, setIsEnabled2] = useState(false);
+  const [isEnabled2, setIsEnabled2] = useState(true);
   const toggleSwitch2 = () => setIsEnabled2(previousState => !previousState);
-  const [isEnabled3, setIsEnabled3] = useState(false);
+  const [isEnabled3, setIsEnabled3] = useState(true);
   const toggleSwitch3 = () => setIsEnabled3(previousState => !previousState);
 
   return(
