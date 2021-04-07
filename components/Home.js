@@ -6,9 +6,6 @@ import {navigationRef} from '../routes/RootNavigation';
 
 const Home = ({navigation}) =>{
 
-  const w = Dimensions.get('screen').width
-  const h = Dimensions.get('screen').height
-
   const moveToCustom = () =>{
     navigation.navigate('Customize')
   }
