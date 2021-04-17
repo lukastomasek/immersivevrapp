@@ -5,6 +5,7 @@ import Home from '../components/Home'
 import Custom from '../components/Customize'
 import Account from '../components/Account'
 import Settings from '../components/Settings'
+import Checkout from '../components/Checkout'
 
 const screens = {
   Splash:{
@@ -27,6 +28,9 @@ const screens = {
   },
   Settings:{
     screen: Settings
+  },
+  Checkout:{
+    screen:Checkout
   }
  
 }

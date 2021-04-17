@@ -3,6 +3,7 @@ import {View,Button, Text, StyleSheet, Image, Alert, TouchableOpacity} from 'rea
 import Header from './Header'
 
 
+
 const Customize = ({navigation}) =>{
 
   const [purplechair,setPurpleChair] = useState(false)
@@ -16,12 +17,25 @@ const Customize = ({navigation}) =>{
     setCart(0)
   }
 
+
+  const checkCart = () =>{
+    if(cart > 0){
+      navigation.navigate('Checkout')
+    }
+  }
+
   return(
     <View style={styles.container}>  
      <Header heading='customize item' onCart={cart}/>
       { bluechair && <Image style={styles.chair} source={require('../assets/chair.png')}/>}
       { greenchair&&  <Image style={styles.chair} source={require('../assets/green-chair.png')}/>}
       { purplechair && <Image style={styles.chair} source={require('../assets/purple-chair.png')}/>}
+      <View style={styles.cart}>
+          <Button
+          title="cart"
+          onPress={()=>{checkCart()}}
+          />
+      </View>
      <View style={styles.container2}>
       <TouchableOpacity  onPress={()=> { 
         setBlueChair(true)
@@ -68,6 +82,7 @@ const styles = StyleSheet.create({
     height:300,
     width:300,
     position:'absolute',
+    top:200
   },
   btn:{
     textAlign:'center',
@@ -104,10 +119,16 @@ const styles = StyleSheet.create({
     position:'absolute',
     flexDirection:'row',
     justifyContent:'center',
-    bottom:150,
+    bottom:180,
     borderRadius:30,
     height:90,
   },
+  cart:{
+    position:'absolute',
+    top:10,
+    right:55,
+    opacity:0
+  }
 })
 
 
