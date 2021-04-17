@@ -10,20 +10,16 @@ const Customize = ({navigation}) =>{
   const [bluechair,setBlueChair] = useState(true)
   const [greenchair,setGreenChair] = useState(false)
   const [cart,setCart] = useState(0)
-
-
+  
   if(cart > 5){
     Alert.alert('out of chairs')
     setCart(0)
   }
-
-
-  const checkCart = () =>{
+ const checkCart = () =>{
     if(cart > 0){
       navigation.navigate('Checkout')
     }
   }
-
   return(
     <View style={styles.container}>  
      <Header heading='customize item' onCart={cart}/>

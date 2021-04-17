@@ -47,7 +47,8 @@ const styles = StyleSheet.create({
     fontSize:35,
     fontWeight:'bold',
     textTransform: 'capitalize',
-    marginTop:30
+    marginTop:30,
+    //fontFamily:'roboto-bold'
   }
   ,cardNum:{
     color:'white',
