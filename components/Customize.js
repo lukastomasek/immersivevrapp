@@ -56,7 +56,7 @@ const Customize = ({navigation}) =>{
         color="white" 
         onPress={()=> {
           setCart( cart +1)
-          navigation.navigate('Checkout')
+          navigation.navigate('Checkout',{purple: purplechair})
         }} 
       />
      </View>

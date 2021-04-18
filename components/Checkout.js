@@ -7,13 +7,13 @@ import CheckoutPayment from './CheckoutPayment'
 
 const Checkout= ({navigation}) =>{
 
-  return(
 
+  return(
     <View style={styles.container}>
       <Header heading='   Checkout Items   ' />  
 
       <CheckoutCounter onItems={1} />
-
+      
       <CheckoutItem 
        onHeader='Immersive VR Chair  V1'
        onPrice = '$1999.99'
@@ -49,6 +49,10 @@ const styles = StyleSheet.create({
     bottom: 80,
     borderRadius:10
   },
+  txt:{
+    color:'white',
+    fontSize: 40
+  }
 })
 
 
