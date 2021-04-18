@@ -48,14 +48,15 @@ const styles = StyleSheet.create({
     fontWeight:'bold',
     textTransform: 'capitalize',
     marginTop:30,
-    fontFamily:'roboto-light'
+    fontFamily:'roboto-bold'
   }
   ,cardNum:{
     color:'white',
     fontSize: 18,
     position: 'absolute',
     top: -55,
-    right: -10
+    right: -10,
+    fontFamily: 'roboto-light'
   }
 })
 

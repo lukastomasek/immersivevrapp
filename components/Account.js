@@ -44,10 +44,11 @@ const styles = StyleSheet.create({
   txt:{
     color:'white',
     fontWeight:'bold',
-    fontSize:25,
+    fontSize:30,
     margin: 20,
     textAlign:'center',
-    textTransform: 'uppercase'
+    textTransform: 'uppercase',
+    fontFamily: 'roboto-bold'
   },
   list:{
     marginTop: 100

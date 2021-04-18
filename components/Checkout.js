@@ -3,9 +3,12 @@ import {View, Text, StyleSheet, Image, TouchableOpacity, Alert,Button} from 'rea
 import Header from './Header'
 import CheckoutItem from './CheckoutItem'
 import CheckoutCounter from  './CheckoutCounter'
+import CheckoutPayment from './CheckoutPayment'
 
-const Checkout= () =>{
+const Checkout= ({navigation}) =>{
+
   return(
+
     <View style={styles.container}>
       <Header heading='   Checkout Items   ' />  
 
@@ -16,6 +19,8 @@ const Checkout= () =>{
        onPrice = '$1999.99'
        onDetails = 'immersive VR chair version 1- 2020'
       />
+
+      <CheckoutPayment />
       
       <View style={styles.btn}>
         <Button

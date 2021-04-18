@@ -83,10 +83,11 @@ const styles = StyleSheet.create({
   txt:{
     color:'white',
     fontWeight:'bold',
-    fontSize:22,
+    fontSize:23,
     margin: 20,
     textAlign:'center',
-    textTransform: 'uppercase'
+    textTransform: 'uppercase',
+    fontFamily: 'roboto-bold'
   },
   list:{
     marginTop: 100,

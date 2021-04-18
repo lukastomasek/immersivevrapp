@@ -56,7 +56,7 @@ const Customize = ({navigation}) =>{
         color="white" 
         onPress={()=> {
           setCart( cart +1)
-          checkCart()
+          navigation.navigate('Checkout')
         }} 
       />
      </View>
@@ -89,7 +89,8 @@ const styles = StyleSheet.create({
     width:200,
     position: 'absolute',
     bottom: 80,
-    borderRadius:10
+    borderRadius:10,
+    fontFamily: 'roboto-regular'
   },
   blueBtn:{
     width:35,

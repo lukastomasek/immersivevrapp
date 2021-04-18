@@ -3,7 +3,10 @@ import {View,Button, Text, StyleSheet, Image, Alert, TouchableOpacity} from 'rea
 
 
 
-export default function checkoutItem({onHeader, onPrice,onDetails}){
+export default function checkoutItem({onHeader, onPrice,onDetails, }){
+ 
+
+
   return(
   <View style={styles.checkoutItem}>
     <View>
@@ -30,7 +33,7 @@ const styles = StyleSheet.create({
   },
   container:{
     position:'absolute',
-    right:15,
+    right:25,
     marginTop:10,
     marginBottom:10
   },
@@ -41,13 +44,15 @@ const styles = StyleSheet.create({
   },
   regularTxt:{
     color:'white',
-    fontSize:18
+    fontSize:18,
+    fontFamily: 'roboto-light'
   },
   price:{
     color: '#07B7FC',
     fontWeight:'bold',
     fontSize:20,
     marginTop:10,
-    marginBottom:10
+    marginBottom:10,
+    fontFamily: 'roboto-light'
   },
 })

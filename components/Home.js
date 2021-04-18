@@ -84,7 +84,8 @@ const styles = StyleSheet.create({
     textAlign:'center',
     left:30,
     color: 'white',
-    fontSize: 16
+    fontSize: 16,
+    fontFamily: 'roboto-regular'
   },
   container1:{
     backgroundColor: '#7C2AB5',

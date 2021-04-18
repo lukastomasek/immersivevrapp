@@ -26,18 +26,20 @@ const styles = StyleSheet.create({
    item:{
     position:'absolute',
     bottom:550,
-    left:20
+    left:20,
   },
    txt:{
      color:'white',
      fontWeight:'bold',
-     fontSize:20
+     fontSize:20,
+     fontFamily: 'roboto-bold'
    },
    txt2:{
      color:'white',
      fontWeight:'bold',
      fontSize:20,
      textAlign:'center',
-     paddingTop: 5
+     paddingTop: 5,
+     fontFamily: 'roboto-regular'
    },
 })
