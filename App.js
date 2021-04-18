@@ -4,34 +4,36 @@ import { StyleSheet, Text, View,Alert,StatusBar } from 'react-native';
 import Navigator from './routes/Homestack'
 import AppLoading from 'expo-app-loading'
 
-const getFonts = () =>
+const getFonts = () =>{
   Font.loadAsync({
-    'roboto-regular': require('./assets/fonts/Roboto-Regular.ttf'),
-    'roboto-bold': require('./assets/fonts/Roboto-Bold.ttf'),
+    'roboto-bold' : require('./assets/fonts/Roboto-Bold.ttf'),
+    'roboto-light': require('./assets/fonts/Roboto-Light.ttf'),
+    'roboto-regular:' : require('./assets/fonts/Roboto-Regular.ttf'),
   })
+}
 
 
 export default function App() {
 
-  const [fontsLoaded,setfontsLoaded] = useState(false)
-
+  const[getFont,fontLoaded] = useState(false)
     
+  if(getFont){
     return (
       <View style = {styles.container}>
         <Navigator />
         <StatusBar style='auto'/>
       </View>
     )
+  }else{
+    return(
+      <AppLoading
+        startAsync={getFonts}
+        onError={()=> Alert.alert('Assets Failed To Load')}
+        onFinish={()=> fontLoaded(true)}
+      />
+    )
+  }
 
-  // else{
-  //     return (
-  //       <AppLoadiçng
-  //         startAsync={getFonts}
-  //         onFinish={() => setfontsLoaded(true)}
-  //         onError={Alert.alert('Failed to load assets!')}
-  //       />
-  //   )
-  // }
 }
 
 const styles = StyleSheet.create({

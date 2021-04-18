@@ -54,7 +54,10 @@ const Customize = ({navigation}) =>{
       <Button
         title="Add To Cart" 
         color="white" 
-        onPress={()=> setCart( cart +1)} 
+        onPress={()=> {
+          setCart( cart +1)
+          checkCart()
+        }} 
       />
      </View>
     </View>

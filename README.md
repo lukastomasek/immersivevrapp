@@ -4,6 +4,8 @@ react native sample app
 
 # TODO:
 
-1. add splash screen - done
-2. add home screen - done
-3. add customize screen - done
+1. add custom font - DONE
+2. add vr item in to home screen
+3. add new customize screen for vr headset
+4. finish check out screen
+5. add log in screen
