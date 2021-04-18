@@ -4,6 +4,7 @@ import Header from './Header'
 import CheckoutItem from './CheckoutItem'
 import CheckoutCounter from  './CheckoutCounter'
 import CheckoutPayment from './CheckoutPayment'
+import CheckoutShipping from './CheckoutShipping'
 
 const Checkout= ({navigation}) =>{
 
@@ -12,7 +13,7 @@ const Checkout= ({navigation}) =>{
     <View style={styles.container}>
       <Header heading='   Checkout Items   ' />  
 
-      <CheckoutCounter onItems={1} />
+      {/* <CheckoutCounter onItems={1} /> */}
       
       <CheckoutItem 
        onHeader='Immersive VR Chair  V1'
@@ -21,11 +22,14 @@ const Checkout= ({navigation}) =>{
       />
 
       <CheckoutPayment />
+
+      <CheckoutShipping />
       
       <View style={styles.btn}>
         <Button
           title="Check Out" 
           color="white" 
+          onPress={()=> navigation.navigate('CheckoutDone')}
         />
       </View>
     </View>

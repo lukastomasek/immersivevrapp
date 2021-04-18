@@ -3,7 +3,6 @@ import {View,Button, Text, StyleSheet, Image, Alert, TouchableOpacity} from 'rea
 import Header from './Header'
 
 
-
 const Customize = ({navigation}) =>{
 
   const [purplechair,setPurpleChair] = useState(false)
@@ -56,7 +55,7 @@ const Customize = ({navigation}) =>{
         color="white" 
         onPress={()=> {
           setCart( cart +1)
-          navigation.navigate('Checkout',{purple: purplechair})
+          navigation.navigate('Checkout')
         }} 
       />
      </View>

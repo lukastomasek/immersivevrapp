@@ -2,18 +2,18 @@ import React from 'react'
 import {View,Button, Text, StyleSheet, Image, Alert, TouchableOpacity} from 'react-native'
 import RadioForm, {RadioButton, RadioButtonInput, RadioButtonLabel} from 'react-native-simple-radio-button'
 
-export default function CheckoutPayment(){
+export default function CheckoutShipping(){
 
   const radio_props = [
-    {label: 'Paypal', value: 0},
-    {label: 'Master Card', value: 1 }
+    {label: 'Pick Up', value: 0},
+    {label: 'Ship To My Address', value: 1 }
   ]
 
   return(
     <View style={styles.checkoutItem}>
       <View>   
          <View style={styles.container}>
-           <Text style={styles.heading}>payment method :</Text>
+           <Text style={styles.heading}>shipping details :</Text>
          <RadioForm
             style= {styles.radio}
             radio_props={radio_props}
@@ -39,7 +39,7 @@ export default function CheckoutPayment(){
       backgroundColor:'#5A5B77',
       width:450,
       height:80,
-      bottom:300
+      bottom:180
     },
     container:{
       position:'absolute',
