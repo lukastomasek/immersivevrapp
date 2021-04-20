@@ -17,7 +17,7 @@ const CheckoutHeadset= ({navigation}) =>{
       <CheckoutItem 
        onHeader='Virtual Reality Headset'
        onPrice = '$399.99'
-       onDetails = 'immersive VR chair version 1- 2020'
+       onDetails = 'VR headset version 1.0'
        onImage = 'VR'
       />
 

@@ -12,8 +12,8 @@ const Header = ({heading, onCart}) =>{
           <Image style={styles.cart} source={require('../assets/cart.png')}/>
           <Text style={styles.cardNum}>{onCart}</Text>
         </TouchableOpacity>
+        <Text style={styles.txt}>{heading}</Text>
       </View>
-      <Text style={styles.txt}>{heading}</Text>
     </View>
   )
 }
@@ -48,7 +48,9 @@ const styles = StyleSheet.create({
     fontWeight:'bold',
     textTransform: 'capitalize',
     marginTop:30,
-    fontFamily:'roboto-bold'
+    fontFamily:'roboto-bold',
+    position: 'relative',
+    bottom:50
   }
   ,cardNum:{
     color:'white',

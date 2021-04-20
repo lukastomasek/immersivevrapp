@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     bottom: 80,
     borderRadius:10,
-    fontFamily: 'roboto-regular'
+    fontFamily: 'roboto-light'
   },
   blueBtn:{
     width:35,

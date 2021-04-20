@@ -11,7 +11,7 @@ export default function checkoutItem({onHeader, onPrice,onDetails,onImage }){
       <View>
         { onImage != 'VR'?
          <Image style={styles.chair} source={require('../assets/chair.png')} /> :
-         <Image style={styles.chair} source={require('../assets/vr_headset.png')} />
+         <Image style={styles.vr} source={require('../assets/vr_headset.png')} />
         }
       </View>
        <View style={styles.container}>
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
   },
   container:{
     position:'absolute',
-    right:25,
+    right:45,
     marginTop:10,
     marginBottom:10
   },
@@ -44,6 +44,11 @@ const styles = StyleSheet.create({
     width: 120,
     height:120,
     left:20
+  },
+  vr:{
+    width: 120,
+    height:120,
+    left:50
   },
   regularTxt:{
     color:'white',

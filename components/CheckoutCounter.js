@@ -40,6 +40,6 @@ const styles = StyleSheet.create({
      fontSize:20,
      textAlign:'center',
      paddingTop: 5,
-     fontFamily: 'roboto-regular'
+     fontFamily: 'roboto-bold'
    },
 })

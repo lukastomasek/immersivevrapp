@@ -11,7 +11,7 @@ const Home = ({navigation}) =>{
   }
   return(
     <View style={styles.container} ref={navigationRef}>
-      <Header heading='featured products' />  
+        <Header heading='featured products' />  
        <View style={styles.cards}>
         <TouchableOpacity onPress={moveToCustom} style={styles.card}>
             <Image style={styles.cardImg} source={require('../assets/card.png')} />
@@ -75,6 +75,7 @@ const styles = StyleSheet.create({
   },
   cards:{
     flexDirection: 'row',
+  
   },
   card:{
     display: 'flex',
@@ -115,7 +116,7 @@ const styles = StyleSheet.create({
     left:30,
     color: 'white',
     fontSize: 16,
-    fontFamily: 'roboto-regular'
+    fontFamily: 'roboto-light'
   },
   container1:{
     backgroundColor: '#7C2AB5',
