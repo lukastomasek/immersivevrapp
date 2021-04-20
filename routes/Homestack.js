@@ -7,6 +7,8 @@ import Account from '../components/Account'
 import Settings from '../components/Settings'
 import Checkout from '../components/Checkout'
 import CheckoutDone from '../components/CheckouDone'
+import CustomizeHeadset from '../components/CustomizeHeadset'
+import CheckoutHeadset from '../components/CheckoutHeadset'
 
 const screens = {
   Splash:{
@@ -33,9 +35,15 @@ const screens = {
   Checkout:{
     screen:Checkout
   },
+  CheckoutHeadset:{
+    screen: CheckoutHeadset
+  },
   CheckoutDone:{
     screen: CheckoutDone
-  }
+  },
+  CustomizeHeadset:{
+    screen: CustomizeHeadset
+  },
  
 }
 

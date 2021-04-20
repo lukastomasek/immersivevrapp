@@ -3,14 +3,17 @@ import {View,Button, Text, StyleSheet, Image, Alert, TouchableOpacity} from 'rea
 
 
 
-export default function checkoutItem({onHeader, onPrice,onDetails, }){
- 
-
-
+export default function checkoutItem({onHeader, onPrice,onDetails,onImage }){
+  
   return(
   <View style={styles.checkoutItem}>
     <View>
-       <Image style={styles.chair} source={require('../assets/chair.png')} />
+      <View>
+        { onImage != 'VR'?
+         <Image style={styles.chair} source={require('../assets/chair.png')} /> :
+         <Image style={styles.chair} source={require('../assets/vr_headset.png')} />
+        }
+      </View>
        <View style={styles.container}>
           <Text style={styles.regularTxt}>{onHeader}</Text>
           <Text style={styles.price}>{onPrice}</Text>

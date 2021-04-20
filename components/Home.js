@@ -20,14 +20,37 @@ const Home = ({navigation}) =>{
               <Text style={styles.detail}>Immersive VR Chair v1</Text>
               </View>
           </TouchableOpacity>
-          <TouchableOpacity onPress={moveToCustom} style={styles.card}>
+          {/* <TouchableOpacity onPress={moveToCustom} style={styles.card}>
             <Image style={styles.cardImg} source={require('../assets/card.png')} />
               <View>
               <Image style={styles.chair} source={require('../assets/chair.png')}/>
               <Text style={styles.detail}>Immersive VR Chair v2</Text>
               </View>
+          </TouchableOpacity> */}
+          <TouchableOpacity onPress={()=> navigation.navigate('CustomizeHeadset')} style={styles.card}>
+            <Image style={styles.cardImg} source={require('../assets/card.png')} />
+              <View>
+              <Image style={styles.chair} source={require('../assets/vr_headset-green.png')}/>
+              <Text style={styles.detail}>VR Headset</Text>
+              </View>
           </TouchableOpacity>
        </View>
+          <View style={styles.cards}> 
+          <TouchableOpacity  style={styles.newCard}>
+            <Image style={styles.cardImg} source={require('../assets/card.png')} />
+              <View>   
+              <Text style={styles.txt}>Coming Soon</Text>       
+              <Text style={styles.detail}>Immersive Chair v2</Text>
+              </View>
+          </TouchableOpacity>
+          <TouchableOpacity  style={styles.newCardRight}>
+            <Image style={styles.cardImg} source={require('../assets/card.png')} />
+              <View>   
+              <Text style={styles.txt}>Coming Soon</Text>       
+              <Text style={styles.detail}>VR Headset v2</Text>
+              </View>
+          </TouchableOpacity>
+          </View>
        <View style={styles.container1}>
           <TouchableOpacity onPress={()=> navigation.navigate('Home')}><Image style={styles.btn}  source={require('../assets/home.png')} /></TouchableOpacity>
           <TouchableOpacity onPress={()=> navigation.navigate('Account')}><Image style={styles.btn} source={require('../assets/account.png')} /></TouchableOpacity>
@@ -59,6 +82,13 @@ const styles = StyleSheet.create({
     bottom: 280,
     margin: 30,
     right: 15,
+  },
+  newCard:{
+    display: 'flex',
+    justifyContent: 'center',
+    bottom: 220,
+    margin: 30,
+    right: 180,
   },
   cardImg:{
    width: 180,
@@ -104,8 +134,25 @@ const styles = StyleSheet.create({
     marginRight:40,
     marginTop:15,
     opacity: 1
+  },
+  txt:{
+    color:'white',
+    position: 'absolute',
+    top:80,
+    left:30,
+    fontSize:18,
+    fontFamily: 'roboto-bold'
+
+  },
+  newCardRight:{
+    display: 'flex',
+    justifyContent: 'center',
+    bottom: 220,
+    marginTop: 30,
+    marginBottom:30,
+    marginRight:30
   }
-});
+})
 
 
 export default Home
