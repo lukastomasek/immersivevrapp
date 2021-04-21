@@ -28,7 +28,7 @@
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "description": "sample app for buying immersive chairs",
+    "description": "sample app for buying immersive chairs with animations and multiple screens",
     "githubUrl": "https://github.com/lukastomasek/immersivevrapp"
   }
 }
