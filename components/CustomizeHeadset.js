@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
-import {View,Button, Text, StyleSheet, Image, Alert, TouchableOpacity} from 'react-native'
+import {View,Button, Text, StyleSheet, Image, Alert, TouchableOpacity,Animated} from 'react-native'
+import { Easing } from 'react-native-reanimated'
 import Header from './Header'
 
 
@@ -10,6 +11,17 @@ const CustomizeHeadset = ({navigation}) =>{
   const [greenchair,setGreenChair] = useState(false)
   const [cart,setCart] = useState(0)
   
+  const fadeAnim = new Animated.Value(0)
+
+  const onImageChanged = () =>{
+    Animated.timing(fadeAnim,{
+      toValue:1,
+      easing: Easing.in(),
+      duration: 500,
+      useNativeDriver:true
+    }).start()
+  }
+
   if(cart > 5){
     Alert.alert('out of chairs')
     setCart(0)
@@ -22,9 +34,27 @@ const CustomizeHeadset = ({navigation}) =>{
   return(
     <View style={styles.container}>  
      <Header heading='customize item' onCart={cart}/>
-      { bluechair && <Image style={styles.chair} source={require('../assets/vr_headset.png')}/>}
-      { greenchair&&  <Image style={styles.chair} source={require('../assets/vr_headset-green.png')}/>}
-      { purplechair && <Image style={styles.chair} source={require('../assets/vr_headset-purple.png')}/>}
+      { bluechair && <Animated.Image onLoad={onImageChanged} style={{
+           opacity:fadeAnim,
+           height:300,
+           width:300,
+           position:'absolute',
+           top:200
+      }} source={require('../assets/vr_headset.png')}/>}
+      { greenchair&&  <Animated.Image onLoad={onImageChanged} style={{
+         opacity:fadeAnim,
+         height:300,
+         width:300,
+         position:'absolute',
+         top:200
+      }} source={require('../assets/vr_headset-green.png')}/>}
+      { purplechair && <Animated.Image onLoad={onImageChanged} style={{
+         opacity:fadeAnim,
+         height:300,
+         width:300,
+         position:'absolute',
+         top:200
+      }} source={require('../assets/vr_headset-purple.png')}/>}
       <View style={styles.cart}>
           <Button
           title="cart"

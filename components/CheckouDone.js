@@ -20,7 +20,7 @@ const CheckoutDone = ({navigation}) =>{
         toValue:1,
         easing: Easing.in(),
         duration:1000,
-        
+        useNativeDriver:true
       }
     ).start()
   },[fadeAnim])

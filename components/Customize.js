@@ -1,5 +1,8 @@
 import React, {useState} from 'react'
-import {View,Button, Text, StyleSheet, Image, Alert, TouchableOpacity} from 'react-native'
+import { useRef } from 'react'
+import {View,Button, Text, StyleSheet, Image, Alert, TouchableOpacity, Animated} from 'react-native'
+import { Easing, interpolate } from 'react-native-reanimated'
+import { useEffect } from 'react/cjs/react.development'
 import Header from './Header'
 
 
@@ -9,6 +12,17 @@ const Customize = ({navigation}) =>{
   const [bluechair,setBlueChair] = useState(true)
   const [greenchair,setGreenChair] = useState(false)
   const [cart,setCart] = useState(0)
+
+  const fadeAnim = new Animated.Value(0)
+
+  const onImageChanged = () =>{
+    Animated.timing(fadeAnim,{
+      toValue:1,
+      easing: Easing.in(),
+      duration: 500,
+      useNativeDriver:true
+    }).start()
+  }
   
   if(cart > 5){
     Alert.alert('out of chairs')
@@ -22,9 +36,27 @@ const Customize = ({navigation}) =>{
   return(
     <View style={styles.container}>  
      <Header heading='customize item' onCart={cart}/>
-      { bluechair && <Image style={styles.chair} source={require('../assets/chair.png')}/>}
-      { greenchair&&  <Image style={styles.chair} source={require('../assets/green-chair.png')}/>}
-      { purplechair && <Image style={styles.chair} source={require('../assets/purple-chair.png')}/>}
+      { bluechair && <Animated.Image  style={{
+        opacity:fadeAnim, 
+        height:300,
+        width:300,
+        position:'absolute',
+        top:200,
+        }}  onLoad={onImageChanged}  source={require('../assets/chair.png')}/>}
+      { greenchair&&  <Animated.Image style={{
+          opacity:fadeAnim, 
+          height:300,
+          width:300,
+          position:'absolute',
+          top:200,
+      }} onLoad={onImageChanged}  source={require('../assets/green-chair.png')}/>}
+      { purplechair && <Animated.Image  style={{
+          opacity:fadeAnim, 
+          height:300,
+          width:300,
+          position:'absolute',
+          top:200,
+      }} onLoad={onImageChanged}  source={require('../assets/purple-chair.png')}/>}
       <View style={styles.cart}>
           <Button
           title="cart"
@@ -41,11 +73,12 @@ const Customize = ({navigation}) =>{
         setGreenChair(true)
         setBlueChair(false)
         setPurpleChair(false)
+ 
         }} style={styles.greenBtn}></TouchableOpacity>
       <TouchableOpacity onPress={()=> {
         setPurpleChair(true)
         setBlueChair(false)
-        setGreenChair(false)
+        setGreenChair(false) 
         }} style={styles.purpleBtn}>
       </TouchableOpacity>
     </View>
@@ -80,7 +113,7 @@ const styles = StyleSheet.create({
     height:300,
     width:300,
     position:'absolute',
-    top:200
+    top:200,
   },
   btn:{
     textAlign:'center',
